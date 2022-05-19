@@ -21,7 +21,9 @@ function removeActive(){
 }
 
 submit.addEventListener('click', ()=>{
-    feedback_card.style.display = 'none'
-    thankUCard.style.display = 'flex'
-    textShowSelectRate.innerText = `You selected ${selectedRating} out of 5`
+    if(selectedRating){
+        feedback_card.style.display = 'none'
+        thankUCard.style.display = 'flex'
+        textShowSelectRate.innerText = `You selected ${selectedRating} out of 5`
+    }
 })
